@@ -49,7 +49,10 @@ def main():
         sizes = np.array(sizes)
 
         # space
-        space = 'right-anterior-superior'
+        if header['qform_code'] == 1:
+            space = 'scanner-xyz'
+        else:
+            space = 'right-anterior-superior'
         
         # kinds
         kinds = ['3-color', 'domain', 'domain', 'domain']
